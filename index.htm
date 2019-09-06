@@ -13,7 +13,9 @@
 
     <script>
         document.getElementById('btn').addEventListener('click', function() {
-            document.body.innerHTML += "<style>@import url(index.css);</style>";
+            var a = document.createElement("style");
+            a.innerHTML = "@import url(index.css);";
+            document.head.appendChild(a);
         });
     </script>
 
