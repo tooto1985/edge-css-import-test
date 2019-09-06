@@ -8,15 +8,23 @@
 </head>
 <body>
     
-    <h1>edge 40.15063.0.0</h1>
+    <h1>Edge 40.15063.0.0</h1>
+    <h2>EdgeHTML 15.15063</h2>
     <button id="btn">@import url(index.css)</button>
-
+    <button id="btn2">link href="index.css"</button>
     <script>
         document.getElementById('btn').addEventListener('click', function() {
             var a = document.createElement("style");
             a.innerHTML = "@import url(index.css);";
             document.head.appendChild(a);
         });
+        document.getElementById('btn2').addEventListener('click', function() {
+            var b = document.createElement("link");
+            b.rel = "stylesheet";
+            b.type = "text/css";
+            b.href = "index.css";
+            document.head.appendChild(b);
+        });        
     </script>
 
 </body>
