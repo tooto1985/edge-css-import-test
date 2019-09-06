@@ -7,10 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
-        @import url(index.css);
-    </style>
-    <h1>edge 40.15063.0.0</h1>
     
+    <h1>edge 40.15063.0.0</h1>
+    <button id="btn">@import url(index.css)</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            document.body.innerHTML += "<style>@import url(index.css);</style>";
+        });
+    </script>
+
 </body>
 </html>
